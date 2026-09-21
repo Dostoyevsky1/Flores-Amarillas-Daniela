@@ -11,17 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script id="gift-data" type="application/json">null</script>
-  <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#carta">Ir a la carta</a>
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Para Daniela, inicio"><span class="brand-mark" aria-hidden="true">✳</span> para Daniela<span class="brand-dot">.</span></a>
-    <nav aria-label="Navegación principal">
-      <a class="letter-link" href="#carta">Mi carta para ti <span aria-hidden="true">↗</span></a>
-      <button id="edit-top" class="quiet-button editor-only" type="button">Personalizar <span aria-hidden="true">✎</span></button>
-    </nav>
+    <nav aria-label="Navegación principal"></nav>
   </header>
 
   <main>
@@ -35,7 +30,7 @@
       </div>
       <figure class="bouquet-frame">
         <div class="season-seal" aria-label="21 de septiembre, flores para ti"><span>21</span><span>SEPTIEMBRE</span><i aria-hidden="true">✳</i></div>
-        <img id="bouquet" class="bouquet" src="assets/ramo-amarillo.png" width="1024" height="1024" alt="Ramo de girasoles y pequeñas flores amarillas pintadas en acuarela, atadas con un lazo dorado" fetchpriority="high">
+        <img id="bouquet" class="bouquet" src="assets/ramo-foto.jpg" width="611" height="567" alt="Foto del ramo de flores amarillas regalado a Daniela" fetchpriority="high">
         <figcaption>un poquito de sol,<br><span>solo para ti ♡</span></figcaption>
       </figure>
       <div class="hero-bottom"><span>UN DETALLE HECHO CON AMOR</span><a href="#carta" aria-label="Bajar a la carta">↓</a><span>PARA MI PERSONA FAVORITA</span></div>
@@ -48,55 +43,33 @@
         <p>Hay cosas que merecen escribirse despacito.</p>
       </div>
 
-      <div class="edit-toolbar editor-only" id="edit-toolbar" hidden>
-        <div><strong>Hazla tuya</strong><p>Toca las palabras para escribir y los espacios para dibujar.</p></div>
-        <div class="toolbar-actions"><button id="shuffle" class="text-button" type="button">Mover espacios <span aria-hidden="true">⤨</span></button><button id="finish-edit" class="small-button" type="button">Guardar carta <span aria-hidden="true">✓</span></button></div>
-        <p class="local-note" id="local-note">Tu borrador se guarda solo en este dispositivo.</p>
-      </div>
-
       <article class="letter-paper" aria-label="Carta para Daniela">
         <div class="paper-tape" aria-hidden="true"></div>
         <div class="paper-topline"><span>Una pequeña carta para un gran amor</span><span aria-hidden="true">♡</span></div>
         <h3 class="handwritten letter-salutation" data-letter-field="greeting" data-max-length="120" aria-label="Saludo de la carta" spellcheck="true">Mi Daniela,</h3>
         <div id="letter-body" class="letter-body">
-          <div class="letter-row" data-row="0">
-            <button class="doodle-slot" type="button" data-slot="0" aria-label="Añadir dibujo en el primer espacio"><img alt="Primer dibujo de la carta" hidden><span class="doodle-placeholder"><span aria-hidden="true">＋</span>un dibujito aquí</span></button>
-            <p class="handwritten letter-paragraph" data-letter-field="paragraph0" data-max-length="5000" aria-label="Primer párrafo de la carta" spellcheck="true">Hoy quería regalarte un poquito de primavera. De esa que llena de luz los días y hace que hasta las cosas más pequeñas se sientan bonitas.</p>
+          <div class="letter-row" data-row="0" data-side="right">
+            <div class="doodle-slot has-drawing" role="img" aria-label="Dibujo hecho a mano" style="--rotation:4deg"><img src="assets/dibujo-hecho-a-mano.jpg" alt="Dibujo hecho a mano"><span class="doodle-placeholder" hidden><span aria-hidden="true">＋</span>un dibujito aquí</span></div>
+            <p class="handwritten letter-paragraph" data-letter-field="paragraph0" data-max-length="5000" aria-label="Primer párrafo de la carta" spellcheck="true">Quería darte este pequeño regalo a pesar  de que estemos peleados, hasta ahora no entiendo por que lo estamos. Pero no dejo de pensar un segundo en ti, en como estás, si ya llegaste a clases, que haces, quiero saber todo de ti y situaciones así me duelen mucho pero tendrás tus motivos.</p>
           </div>
-          <div class="letter-row" data-row="1">
-            <button class="doodle-slot" type="button" data-slot="1" aria-label="Añadir dibujo en el segundo espacio"><img alt="Segundo dibujo de la carta" hidden><span class="doodle-placeholder"><span aria-hidden="true">＋</span>algo que sea nuestro</span></button>
-            <p class="handwritten letter-paragraph" data-letter-field="paragraph1" data-max-length="5000" aria-label="Segundo párrafo de la carta" spellcheck="true">Por eso estas flores amarillas son para ti. Porque me gusta imaginar que cada una guarda algo de lo que a veces no sé decirte: lo mucho que te quiero y lo feliz que me hace tenerte en mi vida.</p>
+          <div class="letter-row" data-row="1" data-side="left">
+            <div class="doodle-slot has-drawing" role="img" aria-label="El perrito diciendo repanpanos" style="--rotation:-6deg"><img src="assets/perrito-repanpanos.jpg" alt="El perrito diciendo repanpanos"><span class="doodle-placeholder" hidden><span aria-hidden="true">＋</span>algo que sea nuestro</span></div>
+            <p class="handwritten letter-paragraph" data-letter-field="paragraph1" data-max-length="5000" aria-label="Segundo párrafo de la carta" spellcheck="true">No querías que fueras espectadora y a mi manera intenté darte mi bienvenida a la primavera(todos mis regalos son raros y feos), y que más yo que hacerte una pequeña página web en dedicatoria hacia tí.</p>
           </div>
-          <div class="letter-row" data-row="2">
-            <button class="doodle-slot" type="button" data-slot="2" aria-label="Añadir dibujo en el tercer espacio"><img alt="Tercer dibujo de la carta" hidden><span class="doodle-placeholder"><span aria-hidden="true">＋</span>un pedacito de ti</span></button>
-            <p class="handwritten letter-paragraph" data-letter-field="paragraph2" data-max-length="5000" aria-label="Tercer párrafo de la carta" spellcheck="true">Ojalá esta nueva estación nos regale muchos momentos juntos, abrazos largos y motivos para sonreír. Y ojalá nunca se te olvide que, entre tantas flores, yo te elegiría a ti.</p>
+          <div class="letter-row" data-row="2" data-side="right">
+            <div class="doodle-slot has-drawing" role="img" aria-label="El síndrome del sapo" style="--rotation:3deg"><img src="assets/sindrome-del-sapo.jpg" alt="El síndrome del sapo"><span class="doodle-placeholder" hidden><span aria-hidden="true">＋</span>un pedacito de ti</span></div>
+            <p class="handwritten letter-paragraph" data-letter-field="paragraph2" data-max-length="5000" aria-label="Tercer párrafo de la carta" spellcheck="true">Al fin y al cabo, las flores en algún momento se marchitan y dejan de verse bonitas y son deshechadas pero esto, queda por siempre. Siempre que quieras volver a recordar el regalo, acá estará. Seguro ni te gusta o ni lo veas al momento en el que te lo envíe pero bueno, así me siento bien.</p>
           </div>
         </div>
-        <div class="letter-signoff"><p class="handwritten" data-letter-field="closing" data-max-length="160" aria-label="Despedida de la carta" spellcheck="true">Con todo mi amor,</p><p class="handwritten signature" data-letter-field="signature" data-max-length="100" aria-label="Firma de la carta" spellcheck="true">Para ti, siempre.</p></div>
+        <div class="letter-signoff"><p class="handwritten" data-letter-field="closing" data-max-length="160" aria-label="Despedida de la carta" spellcheck="true">Con todo mi cariño,</p><p class="handwritten signature" data-letter-field="signature" data-max-length="100" aria-label="Firma de la carta" spellcheck="true">Para ti, siempre.</p></div>
         <div class="paper-bottomline"><span>PD. Tú haces que todo florezca.</span><span aria-hidden="true">♡</span></div>
       </article>
-
-      <div class="letter-controls editor-only">
-        <button id="edit-letter" class="outline-button" type="button"><span aria-hidden="true">✎</span> Escribir mi carta</button>
-        <button id="download-gift" class="text-button" type="button">Descargar para Daniela <span aria-hidden="true">↓</span></button>
-        <a id="save-gift-file" class="outline-button" download="Para-Daniela-con-amor.html" hidden>Guardar archivo preparado <span aria-hidden="true">↓</span></a>
-        <p id="draft-status" role="status">Esta carta es un inicio. Las palabras más bonitas serán las tuyas.</p>
-      </div>
     </section>
 
     <section class="closing-note" aria-label="Dedicatoria final"><span aria-hidden="true">✳</span><p>Que esta primavera nos encuentre<br><em>floreciendo juntos.</em></p><span class="closing-heart" aria-hidden="true">♡</span></section>
   </main>
 
-  <footer><a class="brand" href="#inicio">para Daniela<span class="brand-dot">.</span></a><p>Hecho con amor, especialmente para ti.</p><span>FELIZ PRIMAVERA <span aria-hidden="true">✳</span></span></footer>
+  <footer><a class="brand" href="#inicio">para Daniela<span class="brand-dot">.</span></a><p>Hecho con cariño (amor aún no del todo (pq tu me odias con tu vida)).</p><span>FELIZ PRIMAVERA <span aria-hidden="true">✳</span></span></footer>
 
-  <dialog id="drawing-dialog" aria-labelledby="drawing-title">
-    <div class="dialog-heading"><div><p class="eyebrow">UN DETALLE MUY TUYO</p><h2 id="drawing-title">Deja un <em>dibujito.</em></h2></div><button id="close-drawing" class="icon-button" type="button" aria-label="Cerrar sin guardar">×</button></div>
-    <p class="drawing-help" id="drawing-help">Dibuja con el dedo o el mouse, o elige una imagen tuya.</p>
-    <div class="canvas-wrap"><canvas id="drawing-canvas" width="640" height="480" aria-label="Lienzo para dibujar con el dedo o el mouse" aria-describedby="drawing-help"></canvas></div>
-    <div class="drawing-tools"><div class="color-options" role="group" aria-label="Color del lápiz"><button class="color-option selected" type="button" data-color="#344b35" style="--swatch:#344b35" aria-label="Verde" aria-pressed="true"></button><button class="color-option" type="button" data-color="#d9a426" style="--swatch:#d9a426" aria-label="Amarillo" aria-pressed="false"></button><button class="color-option" type="button" data-color="#cc785e" style="--swatch:#cc785e" aria-label="Terracota" aria-pressed="false"></button><button class="color-option" type="button" data-color="#504738" style="--swatch:#504738" aria-label="Grafito" aria-pressed="false"></button></div><div><button id="undo-drawing" class="text-button" type="button" disabled>Deshacer</button><button id="clear-drawing" class="text-button" type="button">Borrar</button></div></div>
-    <div class="drawing-bottom"><button id="choose-image" class="outline-button" type="button">Elegir imagen</button><input id="drawing-file" type="file" accept="image/png,image/jpeg,image/webp" hidden><button id="save-drawing" class="small-button" type="button">Poner en mi carta <span aria-hidden="true">♡</span></button></div>
-    <p id="drawing-status" class="dialog-status" role="status"></p>
-  </dialog>
-  <div id="toast" class="toast" role="status" hidden></div>
-</body>
+  </body>
 </html>
